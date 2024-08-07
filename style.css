@@ -161,7 +161,7 @@ a{
     .wrap{
         display: flex;
         width: 400%;
-        animation: slideimg 16s ease-in-out infinite;
+        animation: slideimg 12s ease-in-out infinite;
     }
     @keyframes slideimg {
         0%{
@@ -266,6 +266,7 @@ a{
     /***** FIELDS *****/
     .fields{
         overflow: hidden;
+        padding: 0 16px;
         margin: 48px 0;
     }
     .fields ul{
@@ -284,10 +285,29 @@ a{
         white-space: nowrap;
     }
     .top{
-        transform: translateX(-50px);
+        justify-content: flex-start;
+        animation: toplist 60s linear infinite;
     }
     .bottom{
-        transform: translateX(-50px);
+        justify-content: flex-end;
+        animation: bottomlist 62s linear infinite;
+    }
+    @keyframes toplist {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-65%);    
+        }
+    }
+    
+    @keyframes bottomlist {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(65%);    
+        }
     }
     /***** ABOUT *****/
     .details{
