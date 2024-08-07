@@ -354,6 +354,10 @@ a{
         bottom: -30px;
         right: -30px;
     }
+    .card:hover svg{
+        bottom: -20px;
+        right: -20px;
+    }
     /***** NO FEES TABLE *****/
     #zerofees{
         background-color: var(--navy-600);
