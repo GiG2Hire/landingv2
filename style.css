@@ -9,6 +9,8 @@
     --navy-600: rgb(63, 93, 186);
     --navy-600-80a: rgb(63, 93, 186, 0.8);
     --navy-grad: linear-gradient(0deg, rgba(73,95,222,1) -10%, rgba(110,131,255,1) 100%);
+    --orange-400: rgb(249, 164, 85);
+    --orange-400-40a: rgb(249, 164, 85, 0.4);
     --titles: "Unbounded", sans-serif;
     --content: "Space Grotesk", sans-serif;
 }
@@ -47,7 +49,7 @@ a{
     /***** NAVBAR *****/
     nav {
         z-index: 10;
-        position: absolute;
+        position: sticky;
         display: flex;
         justify-content: space-between;
         background-color: var(--ice-70a);
@@ -57,9 +59,9 @@ a{
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         position: fixed;
-        width: 96%;
         top: 0;
         left: 0;
+        width: 96%;
     }
     .menu {
         display: flex;
@@ -100,7 +102,7 @@ a{
     }
     /***** HEADER *****/
     header{
-        margin: 24px 10%;
+        margin: 24px 8%;
         background: var(--navy-grad);
         padding: 16px;
         display: flex;
@@ -430,51 +432,42 @@ a{
         display: flex;
         font-family: var(--content);
     }
-    .tasks{
-        background-color: var(--neon);
+    .verdict-points{
+        background-color: var(--orange-400);
         border-radius: 8px;
         padding: 12px;
         color: var(--navy-600);
         height: fit-content;
         margin-right: -120px;
+        width: 300px;
     }
     .ai aside h4{
         font-size: 1.2em;
         margin-bottom: 8px;
     }
-    .tasks li{
-        margin-bottom: 8px;
-    }
-    .tasks li::before{
-        content: url(assets/check.svg);
-        height: 16px;
-        width: 16px;
-        display: inline-block;
-        margin-right: 8px;
-        vertical-align: middle;
-    }
-    .sentiment{
-        background-color: var(--navy-600-80a);
+    .verdict-vault{
+        background-color: var(--orange-400-40a);
         padding: 12px;
         border-radius: 8px;
         height: fit-content;
-        color: var(--ice);
+        color: var(--navy-600);
         justify-content: flex-end;
         margin-top: 120px;
         margin-left: -110px;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
+        width: 300px;
     }
-    .sentiment ul{
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-    }
-    .sentiment li{
-        align-content: center;
-    }
-    .sentiment p{
+    .verdict-vault p{
         text-align: center;
+    }
+    .evidence{
+        background-color: var(--orange-400);
+        display: flex;
+        gap: 8px;
+        padding: 8px;
+        border-radius: 4px;
+        margin-top: 8px;
     }
     .daoimg {
         display: flex;
@@ -671,19 +664,19 @@ a{
         gap: 32px;
     }
     /***** NO FEES TABLE *****/
-        #zerofees{
-            padding: 24px 5%;
-            flex-direction: column;
-        }
+    #zerofees{
+        padding: 24px 5%;
+        flex-direction: column;
+    }
     /***** ABOUT BOTTOM *****/
     .ai aside{
         flex-direction: column;
     }
-    .tasks{
+    .verdict-points{
         margin-right: 0;
         margin-bottom: -80px;
     }
-    .sentiment{
+    .verdict-vault{
         margin-left: 0;
         margin-top: -120px;
     }
@@ -731,10 +724,10 @@ a{
     .ai aside{
         flex-direction: row;
     }
-    .tasks{
+    .verdict-points{
         margin-right: -120px;
     }
-    .sentiment{
+    .verdict-vault{
         margin-left: -120px;
         margin-top: 120px;
     }
@@ -781,7 +774,7 @@ a{
         margin-right: 0;
         margin-bottom: -80px;
     }
-    .sentiment{
+    .verdict-points{
         margin-left: 0;
         margin-top: -120px;
     }
