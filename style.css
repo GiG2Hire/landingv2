@@ -120,7 +120,7 @@ a{
         background: var(--navy-grad);
         padding: 24px;
         display: flex;
-        gap: 32px;
+        gap: 64px;
         border-radius: 16px;
         justify-content: space-between;
         align-items: center;
@@ -194,6 +194,7 @@ a{
     .wrap{
         display: flex;
         width: 400%;
+        height: 100%;
         animation: slideimg 12s ease-in-out infinite;
     }
     @keyframes slideimg {
@@ -228,6 +229,8 @@ a{
     }
     .freelance img{
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     .one{
         background-color: var(--neon);
@@ -613,9 +616,10 @@ a{
     .hello{
         gap: 32px;
     }
-    /*.slider{
-        height: 700px;
-    }*/
+    .slider{
+        width: 80%;
+        height: 100%;
+    }
     /***** ABOUT *****/
     .details{
         gap: 32px;
@@ -662,9 +666,11 @@ a{
     /***** HEADER *****/
     header{
         flex-direction: column;
+        gap: 32px;
     }
     .slider{
         width: 100%;
+        height: 400px;
     }
     /***** ABOUT *****/
     .details {
